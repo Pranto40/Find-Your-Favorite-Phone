@@ -15,10 +15,20 @@
 
     <!-- Search Form  -->
     <div class="container" style="max-width:500px;">
-        <h1 class="my-4 text-secondary">Find Your Favorite Phone</h1>
+        <h1 class="my-4 text-secondary text-center">Find Your Favorite Phone</h1>
         <div class="input-group mb-3 input-group-lg">
         <input type="text" class="form-control shadow" placeholder="Search Your Phone" id="search-field">
         <button class="btn btn-success shadow" type="button" id="search-btn">Search</button>
+        </div>   
+        <!-- Result Count  -->
+        <div id="result-count" class="text-center fs-5"></div>
+    </div>
+
+    <!-- Search Results  -->
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4" id="result-container">
+    
+        </div>
     </div>
 
     <script src="js/main.js"></script>
