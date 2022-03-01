@@ -84,18 +84,34 @@ const displayPhoneDetails = (phoneDetails) => {
   const modalContent = document.createElement("div");
   modalContent.classList.add("row", "g-0");
   modalContent.innerHTML = `
+  <div class="col-md-4 mt-5">
+  <img class="mt-5" src="${phoneDetails.image}" alt="...">
+  </div>
       <div class="col-md-8">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             <div class="card-body text-start">
-              <img src="${phoneDetails.image}" class="card-img-top w-50" alt="...">
-                <h5 class="card-title">${(phoneDetails.name)}</h5>
-                <h5 class="card-title">Brand Name:${(phoneDetails.brand)}</h5>
-              <p class="card-text">Slug: ${(phoneDetails.slug)}</p>
-            <p class="card-text">Release Date: ${(phoneDetails.releaseDate)}</p>
+                <h3 class="card-title mt-3">Phone Name: ${(phoneDetails.name)}</h3>
+                <h4 class="card-text">Release Date: ${(phoneDetails.releaseDate)}</h4>
+                <h4>Main Features</h4>
+                <ul>
+                <li>Chip Set: ${(phoneDetails.mainFeatures.chipSet)}</li>
+                <li>Memory: ${(phoneDetails.mainFeatures.memory)}</li>
+                <li>Storage: ${(phoneDetails.mainFeatures.storage)}</li>
+                <li>Display Size: ${(phoneDetails.mainFeatures.displaySize)}</li>
+               </ul>
+               <h4>Others Features</h4>
+               <ul>
+               <li>Bluetooth: ${(phoneDetails.others.Bluetooth)}</li>
+               <li>GPS: ${(phoneDetails.others.GPS)}</li>
+               <li>NFC: ${(phoneDetails.others.NFC)}</li>
+               <li>Radio: ${(phoneDetails.others.Radio)}</li>
+               <li>USB: ${(phoneDetails.others.USB)}</li>
+               <li>WLAN: ${(phoneDetails.others.WLAN)}</li>
+               </ul>
+
           </div>
       </div>
   `;
-
   parentDetailsContainer.textContent = "";
   parentDetailsContainer.appendChild(modalContent);
 };
