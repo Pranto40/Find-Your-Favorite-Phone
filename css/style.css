@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #fcfcff;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+h5.card-title {
+    font-size: 17px;
+}
+
+#search-field {
+    border-radius: 50px 0 0 50px;
+}
+
+#search-btn {
+    border-radius: 0 50px 50px 0;
+}
