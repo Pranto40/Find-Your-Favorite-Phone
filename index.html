@@ -15,15 +15,16 @@
 
     <!-- Search Form  -->
     <div class="container" style="max-width:500px;">
-        <h1 class="my-4 text-secondary text-center">Find Your Favorite Phone</h1>
-        <div class="input-group mb-3 input-group-lg">
-        <input type="text" class="form-control shadow" placeholder="Search Your Phone" id="search-field">
-        <button class="btn btn-success shadow" type="button" id="search-btn">Search</button>
-        </div>   
-        <!-- Error Message  -->
+            <h1 class="my-4 text-secondary text-center">Find Your Favorite Phone</h1>
+            <div class="input-group mb-3 input-group-lg">
+                <input type="text" class="form-control shadow" placeholder="Search Your Phone" id="search-field">
+                <button class="btn btn-success shadow" type="button" id="search-btn">Search</button>
+            </div>   
+    <!-- Error Message  -->
         <div id="error-message" class="text-center text-danger fs-5"></div>  
-        <!-- Result Count  -->
-        <div id="result-count" class="text-center fs-5"></div>
+    <!-- Result Count  -->
+    <div id="result-count" class="text-center fs-5"></div>
+
     </div>
 
     <!-- Search Results  -->
@@ -32,6 +33,22 @@
     
         </div>
     </div>
+
+        <!-- phone Details Modal -->
+        <div class="modal" id="phone-details" tabindex="-1" aria-labelledby="phone-details" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="card border-0" id="modal-dialog-box">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bootstrap JS Bundle  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <script src="js/main.js"></script>
 </body>

@@ -9,6 +9,12 @@ body {
     object-fit: cover;
 }
 
+p.card-text {
+    font-size: 14px;
+    text-align: left;
+    color: #5a5a5a;
+}
+
 h5.card-title {
     font-size: 17px;
 }
@@ -19,4 +25,36 @@ h5.card-title {
 
 #search-btn {
     border-radius: 0 50px 50px 0;
+}
+
+div#result-count {
+    color: #5e5e5e;
+}
+
+button.btn-close {
+    border: 1px solid #32b361;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.meal-photo {
+    object-fit: cover;
+}
+
+p.ingredients span,
+p.category span {
+    font-size: 14px;
+    margin: 2px;
+    background: #efefef;
+    padding: 2px 10px;
+    display: inline-block;
+}
+
+p.area span {
+    font-size: 14px;
+    margin: 2px;
+    background: #32b361;
+    padding: 2px 10px;
+    display: inline-block;
 }
