@@ -10,13 +10,16 @@ function spinnerControl(remove, add) {
   const searchField = document.getElementById("search-field");
   
     // Error Handling
+    const resultCount = document.getElementById("result-count");
     const errorDiv = document.getElementById("error-message");
     if (searchField.value == "") {
       errorDiv.innerText = "Please write something to search";
+      resultCount.innerText = '';
     }
     else if (searchField.value < 0) {
       searchField.value = "";
       errorDiv.innerText = "Please write a positive number";
+      resultCount.innerText = '';
     }
      else {
       errorDiv.innerText = "";
@@ -45,11 +48,20 @@ function spinnerControl(remove, add) {
           resultCount.innerHTML = `${first20Data.length} result found for "<strong>${searchField.value}</strong>"`;
         }
   
+        // const resultCount = document.getElementById("result-count");
+        else if (phoneList.length == 0) {
+          searchField.value = "";
+          const resultContainer = document.getElementById("result-container");
+          resultContainer.textContent = "";
+          let errorMessage = "No result found ";
+          resultCount.innerText = errorMessage;
+        }
         searchField.value = "";
         resultContainer.textContent = "";
   
         // Show Results
         for (const phone of first20Data) {
+          resultCount.innerText = '';
           const createDiv = document.createElement("div");
           createDiv.classList.add("col");
         createDiv.innerHTML = `
